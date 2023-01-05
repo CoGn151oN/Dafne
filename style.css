@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*hamburger*/
+.toggle {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  background: url('img/open.gif');
+  background-repeat: no-repeat;
+  background-size: 12em;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 18px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle.active {
+  background: url('img/close2.gif');
+  background-repeat: no-repeat;
+  background-size: 12em;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 18px;
+  box-shadow: 10px 10px 5px rgb(0, 0, 0, 0.3);
+}
+
+/*main*/
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(185, 157, 129);
+  mix-blend-mode: overlay;
+}
+
+.logo_index_header {
+  margin-left: 25%;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h4 {
+  font-size: 2.65em;
+  font-weight: 500;
+  color: snow;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+
+.text h2 {
+  font-size: 3.05em;
+  font-weight: 500;
+  color: snow;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 3.18em;
+  font-weight: 500;
+  color: snow;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-top: 3.5em;
+}
+
+.text p {
+  font-size: 1.1em;
+  color: snow;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: snow;
+  padding: 8px 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*button hover*/
+.text a:hover {
+  letter-spacing: 6px;
+  color: rgb(224, 194, 142);
+}
+
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  text-decoration: none;
+  width: 4.3em;
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-12px);
+  box-shadow: 6px 6px 8px 6px rgba(0, 0, 0, 0.4), 5px 9px 20px 8px rgba(0, 0, 0, 0.3);
+}
+
+.iglogo {
+  margin-left: -0.7em;
+}
+
+.fblogo,
+.iglogo,
+.email {
+  width: auto;
+  height: 4em;
+}
+
+.phone_logo {
+  width: auto;
+  height: 3.7em;
+}
+
+div.menu {
+  background-color: white;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #819DB9;
+  padding: -10px;
+}
+
+.menu ul li a:hover {
+  color: rgb(224, 194, 142);
+}
+
+@media (max-width: 991px) {
+
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+}
